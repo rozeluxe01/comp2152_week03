@@ -7,7 +7,7 @@ weapons = ["Fist", "Knife", "Club", "Gun", "Bomb", "Nuclear Bomb"]
 
 print("Available Weapons: ", ', '.join(weapons))
 
-def getCombatStrength(Prompt):
+def getCombatStrength(prompt):
     while True:
         value = int(input(prompt))
         if 1<= value <= 6:
@@ -15,8 +15,8 @@ def getCombatStrength(Prompt):
         else:
             print("Invalid Input: Please enter a number between 1-6")
 
-combatStrenght = getCombatStrength("Please enter a number between 1-6 for Player")
-mCombatStrnegth = getCombatStrength("Please enter a number between 1-6 for Monster")
+combatStrength = getCombatStrength("Please enter a number between 1-6 for Player")
+mCombatStrength = getCombatStrength("Please enter a number between 1-6 for Monster")
 
 for j in range(1, 21, 2):
     heroRoll = random.choice(diceOptions)
@@ -36,5 +36,5 @@ for j in range(1, 21, 2):
         print("Hero Wins!")
     elif heroTotal < monsterTotal:
         print("Monster Wins!")
-    else
+    else:
         print("It's a tie!")
